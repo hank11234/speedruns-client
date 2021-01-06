@@ -11,7 +11,39 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+
     <body>
-      <h1>Browser Template</h1>
+      <h1>Speedrun Tracker</h1>
+      <p id="message"></p>
+
+      <div class="before-login">
+        <h5>Sign-up</h5>
+        <form id="sign-up">
+          <input placeholder="Email" type="text" name="credentials[email]" />
+          <input placeholder="Password" type="password" name="credentials[password]" />
+          <input placeholder="Confirm password" type="password" name="credentials[password_confirmation]" />
+          <button type="submit">Sign Up</button>
+        </form>
+
+        <h5>Sign-in</h5>
+        <form id="sign-in">
+          <input placeholder="Email" type="text" name="credentials[email]" />
+          <input placeholder="Password" type="password" name="credentials[password]" />
+          <button type="submit">Sign In</button>
+        </form>
+      </div>
+
+      <div class="after-login">
+        <h5>Change Password</h5>
+        <form id="change-password">
+          <input placeholder="Old Password" type="password" name="passwords[old]" />
+          <input placeholder="New Password" type="password" name="passwords[new]"/>
+          <button type="submit">Change Password</button>
+        </form>
+
+        <form id="logout">
+          <button type="submit">Log out</button>
+        </form>
+      </div>
     </body>
 </html>
