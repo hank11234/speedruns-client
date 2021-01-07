@@ -16707,6 +16707,7 @@ var signInFailure = function signInFailure(error) {
 // Success gives 204 'no content' error so there is no response object
 var changePasswordSuccess = function changePasswordSuccess() {
   $('#message').text('Changed password successfully');
+  $('form').trigger('reset');
 };
 
 var changePasswordFailure = function changePasswordFailure(error) {
