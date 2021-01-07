@@ -16653,7 +16653,7 @@ module.exports = {
 
 var apiUrl = void 0;
 var apiUrls = {
-  production: 'https://sleepy-plateau-04404.herokuapp.com/',
+  production: 'https://sleepy-plateau-04404.herokuapp.com',
   development: 'http://localhost:4741'
 };
 
