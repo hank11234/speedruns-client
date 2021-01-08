@@ -24,7 +24,7 @@ const onIndexSuccess = function (response) {
   // make constant for this array
   const games = response.games
   // new empty array
-  let gmaesHTML = ''
+  let gamesHTML = ''
   // for each movie in array games, generate HTML and put that HTML in the DOM
   games.forEach(function (currentGame) {
     const currentGameHTML = (`
@@ -59,7 +59,7 @@ const onDeleteSuccess = function () {
 }
 
 const onUpdateSuccess = function (movieData) {
-  $('#game-display').text('Movie successfully updated')
+  $('#game-display').text('Game successfully updated')
   $('form').trigger('reset')
 }
 

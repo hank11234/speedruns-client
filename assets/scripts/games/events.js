@@ -10,7 +10,7 @@ const onGameCreate = function (event) {
 
   const data = getFormFields(event.target)
 
-  api.createMovie(data)
+  api.create(data)
     .then(ui.createGameSuccess)
     .catch(ui.createGameFailure)
 }

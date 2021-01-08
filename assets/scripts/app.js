@@ -17,6 +17,6 @@ $(() => {
   $('#game-create').on('submit', gameEvents.onGameCreate)
   $('#games-index').on('submit', gameEvents.onShowGames)
   $('#game-show').on('submit', gameEvents.onGetGame)
-  $('#gamee-destroy').on('submit', gameEvents.onDestroyGame)
+  $('#game-destroy').on('submit', gameEvents.onDestroyGame)
   $('#game-update').on('submit', gameEvents.onUpdateGame)
 })
