@@ -30,7 +30,7 @@ const onIndexSuccess = function (response) {
   // for each movie in array games, generate HTML and put that HTML in the DOM
   games.forEach(function (currentGame) {
     const currentGameHTML = `
-    <h4>Title: ${currentGame.title}</h4>
+    <h4>${currentGame.title}</h4>
     <p>Release Date: ${currentGame.releaseDate}</p>
     <p>Genre: ${currentGame.genre}</p>
     <p>Platform: ${currentGame.platform}</p>
@@ -44,7 +44,7 @@ const onIndexSuccess = function (response) {
 const onShowSuccess = function (gameData) {
   $('#message').text('')  
   const gameHTML = `
-    <h4>Title: ${gameData.game.title}</h4>
+    <h4>${gameData.game.title}</h4>
     <p>Release Date: ${gameData.game.releaseDate}</p>
     <p>Genre: ${gameData.game.genre}</p>
     <p>Platform: ${gameData.game.platform}</p>
