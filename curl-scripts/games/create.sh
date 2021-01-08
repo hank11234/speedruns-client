@@ -7,6 +7,7 @@ curl "http://localhost:4741/games" \
     "game": {
       "title": "'"${TITLE}"'",
       "releaseDate": "'"${DATE}"'",
-      "genre": "'"${GENRE}"'"
+      "genre": "'"${GENRE}"'",
+      "platform": "'"${PLATFORM}
     }
   }'
