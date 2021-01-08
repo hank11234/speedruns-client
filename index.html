@@ -34,10 +34,41 @@
       </div>
 
       <div class="after-login">
-        <h3>Add a new game</h3>
+        <div class="game-display"></div>
+
+        <form id="games-index">
+          <button type="submit">Show all your Games</button>
+        </form>
+
+        <h3>Get a Game</h3>
+        <form id="game-show">
+          <input type="text" name="game[id]" placeholder="Game ID Here">
+          <input type="submit" value="Get Game">
+        </form>
+
+        <h3>Add a new Game</h3>
         <form id="game-create">
           <input type="text" name="game[title]" placeholder="Game title">
-          <input type="text" name="game[releaseDate]" placeholder="Release date"
+          <input type="text" name="game[releaseDate]" placeholder="Release date">
+          <input type="text" name="game[genre]" placeholder="Genre">
+          <input type="text" name="game[platform]" placeholder="Platform">
+          <button type="submit">Add Game</button>
+        </form>
+
+        <h3>Remove a Game</h3>
+        <form id="game-destroy">
+          <input type="text" name="game[id]" placeholder="Game ID">
+          <button type="submit">Delete game</button>
+        </form>
+
+        <h3>Edit a Game</h3>
+        <form id="game-update">
+          <input type="text" name="game[id]" placeholder="Game ID">
+          <input type="text" name="game[title]" placeholder="Game title">
+          <input type="text" name="game[releaseDate]" placeholder="Release date">
+          <input type="text" name="game[genre]" placeholder="Genre">
+          <input type="text" name="game[platform]" placeholder="Platform">
+          <button type="submit">Edit Game</button>
         </form>
 
         <h5>Change Password</h5>
