@@ -8,6 +8,6 @@ curl "http://localhost:4741/games/${ID}" \
       "title": "'"${TITLE}"'",
       "releaseDate": "'"${DATE}"'",
       "genre": "'"${GENRE}"'",
-      "platform": "'"${PLATFORM}
+      "platform": "'"${PLATFORM}"'"
     }
   }'
