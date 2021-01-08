@@ -27,7 +27,7 @@ const index = function () {
 
 const show = function (gameData) {
   return $.ajax({
-    url: config.apiUrl + '/games/' + gameData.movie.id,
+    url: config.apiUrl + '/games/' + gameData.game.id,
     method: 'GET',
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -37,7 +37,7 @@ const show = function (gameData) {
 
 const destroy = function (gameData) {
   return $.ajax({
-    url: config.apiUrl + '/games/' + gameData.movie.id,
+    url: config.apiUrl + '/games/' + gameData.game.id,
     method: 'DELETE',
     headers: {
       Authorization: 'Bearer ' + store.user.token
@@ -47,7 +47,7 @@ const destroy = function (gameData) {
 
 const update = function (gameData) {
   return $.ajax({
-    url: config.apiUrl + '/games/' + gameData.movie.id,
+    url: config.apiUrl + '/games/' + gameData.game.id,
     method: 'PATCH',
     data: gameData,
     headers: {
