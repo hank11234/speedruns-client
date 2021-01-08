@@ -3,12 +3,11 @@
 const store = require('./../store')
 const config = require('./../config')
 
-const create = function (data) {
+const create = function (gameData) {
   return $.ajax({
     url: config.apiUrl + '/games',
     method: 'POST',
-    // data: data
-    data,
+    data: gameData,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }

@@ -2,16 +2,18 @@
 
 const createGameSuccess = function (response) {
 
-  $('#message').text('Game Created!')
+  $('#message').text('New Game added!')
 
   const gameHtml = `
   <h3>${response.game.title}</h3>
-  <h4>Release Date: ${response.game.releaseDate}</h4>
-  <h4>Genre: ${response.game.genre}</h4>
-  <h4>Platform: ${response.game.platform}</h4>
-`
+  <p>Release Date: ${response.game.releaseDate}</p>
+  <p>Genre: ${response.game.genre}</p>
+  <p>Platform: ${response.game.platform}</p>
+  <p>ID: ${response.game._id}</p>
+  `
 
-  $('.game-display').html(gameHtml)
+  $('#game-display').html(gameHtml)
+  $('form').trigger('reset')
 }
 
 const createGameFailure = function (error) {
@@ -19,7 +21,7 @@ const createGameFailure = function (error) {
 }
 
 const onIndexSuccess = function (response) {
-  console.log(response);
+  $('#message').text('')
   // gives object of all games
   // make constant for this array
   const games = response.games
@@ -27,39 +29,40 @@ const onIndexSuccess = function (response) {
   let gamesHTML = ''
   // for each movie in array games, generate HTML and put that HTML in the DOM
   games.forEach(function (currentGame) {
-    const currentGameHTML = (`
-      <div>
-        <h4>Title: ${currentGame.title}</h4>
-        <p>Release Date: ${currentGame.releaseDate}</p>
-        <p>Genre: ${currentGame.genre}</p>
-        <p>Platform: ${currentGame.platform}</p>
-        <p>ID: ${currentGame._id}</p>
-      `)
-      gamesHTML += currentGameHTML
+    const currentGameHTML = `
+    <h4>Title: ${currentGame.title}</h4>
+    <p>Release Date: ${currentGame.releaseDate}</p>
+    <p>Genre: ${currentGame.genre}</p>
+    <p>Platform: ${currentGame.platform}</p>
+    <p>ID: ${currentGame._id}</p>
+    `
+    gamesHTML += currentGameHTML
   })
   $('#game-display').html(gamesHTML)
 }
 
 const onShowSuccess = function (gameData) {
-  let gameHTML = (`
-    <div>
-      <h4>Title: ${gameData.game.title}</h4>
-      <p>Release Date: ${gameData.game.releaseDate}</p>
-      <p>Genre: ${gameData.game.genre}</p>
-      <p>Platform: ${gameData.game.platform}</p>
-      <p>ID: ${gameData.game._id}</p>
-    `)
+  $('#message').text('')  
+  const gameHTML = `
+    <h4>Title: ${gameData.game.title}</h4>
+    <p>Release Date: ${gameData.game.releaseDate}</p>
+    <p>Genre: ${gameData.game.genre}</p>
+    <p>Platform: ${gameData.game.platform}</p>
+    <p>ID: ${gameData.game._id}</p>
+    `
   $('#game-display').html(gameHTML)
   $('form').trigger('reset')
 }
 
 const onDeleteSuccess = function () {
-  $('#game-display').text('Delete successful!')
+  $('#message').text('Delete successful!')
+  $('#game-display').text('')
   $('form').trigger('reset')
 }
 
-const onUpdateSuccess = function (movieData) {
-  $('#game-display').text('Game successfully updated')
+const onUpdateSuccess = function () {
+  $('#message').text('Game successfully updated!')
+  $('#game-display').text('')
   $('form').trigger('reset')
 }
 

@@ -33,6 +33,7 @@ const signInFailure = function (error) {
 // Success gives 204 'no content' error so there is no response object
 const changePasswordSuccess = function () {
   $('#message').text('Changed password successfully')
+  $('#game-display').text('')
   $('form').trigger('reset')
 }
 
@@ -42,6 +43,7 @@ const changePasswordFailure = function (error) {
 
 const logoutSuccess = function () {
   $('#message').text('Logged out')
+  $('#game-display').text('')
 
   // Hide after login
   $('.after-login').hide()
