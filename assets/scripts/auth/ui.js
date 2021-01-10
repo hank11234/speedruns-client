@@ -14,11 +14,9 @@ const signUpFailure = function (error) {
 
 const signInSuccess = function (response) {
   $('#message').text('Logged in!')
-  console.log(store);
   // "Store" the user; create a new key on the 'store' object;
   // give that key a value of response.user
   store.user = response.user
-  console.log(store);
 
   // Hide before login
   $('.before-login').hide()

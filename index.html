@@ -61,7 +61,7 @@
         <h3>Remove a Game</h3>
         <form id="game-destroy">
           <input type="text" name="game[id]" placeholder="Game ID">
-          <button type="submit">Delete game</button>
+          <button type="submit">Delete Game</button>
         </form>
 
         <h3>Edit a Game</h3>
@@ -72,6 +72,32 @@
           <input type="text" name="game[genre]" placeholder="Genre">
           <input type="text" name="game[platform]" placeholder="Platform">
           <button type="submit">Edit Game</button>
+        </form>
+
+        <h3>Add a new Speedrun</h3>
+        <form id="run-create">
+          <input type="text" name="run[gameId]" placeholder="Game ID">
+          <input type="text" name="run[time]" placeholder="Length of Run">
+          <input type="text" name="run[date]" placeholder="Run date">
+          <input type="text" name="run[goal]" placeholder="Goal">
+          <button type="submit">Add Run</button>
+        </form>
+
+        <h3>Remove a Speedrun</h3>
+        <form id="run-destroy">
+          <input type="text" name="run[gameId]" placeholder="Game ID">
+          <input type="text" name="run[id]" placeholder="Run ID">
+          <button type="submit">Delete Run</button>
+        </form>
+
+        <h3>Edit a Speedrun</h3>
+        <form id="run-update">
+          <input type="text" name="run[gameId]" placeholder="Game ID">
+          <input type="text" name="run[id]" placeholder="Run ID">
+          <input type="text" name="run[time]" placeholder="Length of Run">
+          <input type="text" name="run[date]" placeholder="Run date">
+          <input type="text" name="run[goal]" placeholder="Goal">
+          <button type="submit">Edit Run</button>
         </form>
 
         <h5>Change Password</h5>

@@ -34,6 +34,7 @@ const onIndexSuccess = function (response) {
     <p>Release Date: ${currentGame.releaseDate}</p>
     <p>Genre: ${currentGame.genre}</p>
     <p>Platform: ${currentGame.platform}</p>
+    <p>Speedruns: ${currentGame.runs.length}</p>
     <p>ID: ${currentGame._id}</p>
     `
     gamesHTML += currentGameHTML
@@ -48,6 +49,7 @@ const onShowSuccess = function (gameData) {
     <p>Release Date: ${gameData.game.releaseDate}</p>
     <p>Genre: ${gameData.game.genre}</p>
     <p>Platform: ${gameData.game.platform}</p>
+    <p>Speedruns: ${gameData.game.runs}</p>
     <p>ID: ${gameData.game._id}</p>
     `
   $('#game-display').html(gameHTML)
