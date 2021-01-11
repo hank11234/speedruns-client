@@ -5,6 +5,7 @@ const store = require('./../store')
 // The ajax function's .then will pass this as a response object
 const signUpSuccess = function () {
   $('#message').text('Account created!')
+  $('form').trigger('reset')
 }
 
 // The .catch will pass this as error object

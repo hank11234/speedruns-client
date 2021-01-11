@@ -43,14 +43,25 @@ const onIndexSuccess = function (response) {
 }
 
 const onShowSuccess = function (gameData) {
-  $('#message').text('')  
+  $('#message').text('') 
+  const runs = gameData.game.runs
+  let runsHTML= ''
+  runs.forEach(function (currentRun) {
+    const currentRunHTML = `
+    <p>Time: ${currentRun.time}</p>
+    <p>Date: ${currentRun.date}</p>
+    <p>Goal: ${currentRun.goal}</p>
+    <p>Run ID: ${currentRun._id}</p>
+    `
+    runsHTML += currentRunHTML
+  }) 
   const gameHTML = `
     <h4>${gameData.game.title}</h4>
     <p>Release Date: ${gameData.game.releaseDate}</p>
     <p>Genre: ${gameData.game.genre}</p>
     <p>Platform: ${gameData.game.platform}</p>
-    <p>Speedruns: ${gameData.game.runs}</p>
-    <p>ID: ${gameData.game._id}</p>
+    <p>Speedruns: ${runsHTML}</p>
+    <p>Game ID: ${gameData.game._id}</p>
     `
   $('#game-display').html(gameHTML)
   $('form').trigger('reset')

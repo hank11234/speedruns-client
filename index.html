@@ -52,7 +52,7 @@
         <h3>Add a new Game</h3>
         <form id="game-create">
           <input type="text" name="game[title]" placeholder="Game title">
-          <input type="text" name="game[releaseDate]" placeholder="Release date">
+          <input type="text" name="game[releaseDate]" placeholder="Release date (mm/dd/yy)">
           <input type="text" name="game[genre]" placeholder="Genre">
           <input type="text" name="game[platform]" placeholder="Platform">
           <button type="submit">Add Game</button>
@@ -68,7 +68,7 @@
         <form id="game-update">
           <input type="text" name="game[id]" placeholder="Game ID">
           <input type="text" name="game[title]" placeholder="Game title">
-          <input type="text" name="game[releaseDate]" placeholder="Release date">
+          <input type="text" name="game[releaseDate]" placeholder="Release date (mm/dd/yy)">
           <input type="text" name="game[genre]" placeholder="Genre">
           <input type="text" name="game[platform]" placeholder="Platform">
           <button type="submit">Edit Game</button>
@@ -77,8 +77,8 @@
         <h3>Add a new Speedrun</h3>
         <form id="run-create">
           <input type="text" name="run[gameId]" placeholder="Game ID">
-          <input type="text" name="run[time]" placeholder="Length of Run">
-          <input type="text" name="run[date]" placeholder="Run date">
+          <input type="text" name="run[time]" placeholder="Length of Run (hh:mm:ss)">
+          <input type="text" name="run[date]" placeholder="Run date (mm/dd/yy)">
           <input type="text" name="run[goal]" placeholder="Goal">
           <button type="submit">Add Run</button>
         </form>
@@ -94,8 +94,8 @@
         <form id="run-update">
           <input type="text" name="run[gameId]" placeholder="Game ID">
           <input type="text" name="run[id]" placeholder="Run ID">
-          <input type="text" name="run[time]" placeholder="Length of Run">
-          <input type="text" name="run[date]" placeholder="Run date">
+          <input type="text" name="run[time]" placeholder="Length of Run (hh:mm:ss)">
+          <input type="text" name="run[date]" placeholder="Run date (mm/dd/yy)">
           <input type="text" name="run[goal]" placeholder="Goal">
           <button type="submit">Edit Run</button>
         </form>
