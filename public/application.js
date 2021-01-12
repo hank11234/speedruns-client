@@ -17003,11 +17003,16 @@ var onIndexSuccess = function onIndexSuccess(response) {
 var onShowSuccess = function onShowSuccess(gameData) {
   $('#message').text('');
   var runs = gameData.game.runs;
+  runs.sort(function (a, b) {
+    return a.time > b.time ? 1 : -1;
+  });
+  console.log(runs);
   var runsHTML = '';
   runs.forEach(function (currentRun) {
     var currentRunHTML = '\n    <p>Time: ' + currentRun.time + '</p>\n    <p>Date: ' + currentRun.date + '</p>\n    <p>Goal: ' + currentRun.goal + '</p>\n    <p>Run ID: ' + currentRun._id + '</p>\n    ';
     runsHTML += currentRunHTML;
   });
+  console.log(runsHTML);
   var gameHTML = '\n    <h4>' + gameData.game.title + '</h4>\n    <p>Release Date: ' + gameData.game.releaseDate + '</p>\n    <p>Genre: ' + gameData.game.genre + '</p>\n    <p>Platform: ' + gameData.game.platform + '</p>\n    <p>Speedruns: ' + runsHTML + '</p>\n    <p>Game ID: ' + gameData.game._id + '</p>\n    ';
   $('#game-display').html(gameHTML);
   $('form').trigger('reset');
