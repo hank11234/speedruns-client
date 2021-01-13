@@ -58,7 +58,6 @@ const logoutSuccess = function () {
 
 const logoutFailure = function (error) {
   $('#message').text('Logout Error: ' + error)
-  console.log('error is:' + error);
 }
 
 module.exports = {

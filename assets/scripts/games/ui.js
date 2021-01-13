@@ -46,7 +46,6 @@ const onShowSuccess = function (gameData) {
   $('#message').text('') 
   const runs = gameData.game.runs
   runs.sort((a, b) => (a.time > b.time) ? 1 : -1)
-  console.log(runs);
   let runsHTML= ''
   runs.forEach(function (currentRun) {
     const currentRunHTML = `
@@ -57,7 +56,6 @@ const onShowSuccess = function (gameData) {
     `
     runsHTML += currentRunHTML
   })
-  console.log(runsHTML);
   const gameHTML = `
     <h4>${gameData.game.title}</h4>
     <p>Release Date: ${gameData.game.releaseDate}</p>

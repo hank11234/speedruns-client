@@ -2,8 +2,6 @@
 
 const createRunSuccess = function (response) {
   const currentRun = (response.game.runs.length - 1)
-  console.log(response);
-//   const game = 
   $('#message').text('New Run added!')
 
   const runHtml = `

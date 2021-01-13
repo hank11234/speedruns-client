@@ -34,7 +34,6 @@ const onGetGame = function (event) {
 
 const onDestroyGame = function (event) {
   event.preventDefault()
-  console.log(event.target);
   const gameData = getFormFields(event.target)
   api.destroy(gameData)
     .then(ui.onDeleteSuccess)
