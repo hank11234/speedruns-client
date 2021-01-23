@@ -25,6 +25,7 @@ const onIndexSuccess = function (response) {
   // gives object of all games
   // make constant for this array
   const games = response.games
+  console.log(games);
   // new empty array
   let gamesHTML = ''
   // for each movie in array games, generate HTML and put that HTML in the DOM
@@ -40,7 +41,9 @@ const onIndexSuccess = function (response) {
     gamesHTML += currentGameHTML
   })
   if (!gamesHTML) {
-  $('#game-display').text('You have no Games.')
+    $('#game-display').text('You have no Games.')
+  } else {
+    $('#game-display').html(gamesHTML)
   }
 }
 

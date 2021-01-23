@@ -22,7 +22,8 @@ const signInSuccess = function (response) {
   // Hide before login
   $('.before-login').hide()
   // Show after login
-  $('.after-login').show()
+  $('#buttons').show()
+  $('#auth').show()
 }
 
 const signInFailure = function (error) {
@@ -45,7 +46,11 @@ const logoutSuccess = function () {
   $('#game-display').text('')
 
   // Hide after login
-  $('.after-login').hide()
+  $('#gameActions').hide()
+  $('#runActions').hide()
+  $('#auth').hide()
+  $('#games').hide()
+  $('#runs').hide()
   // Show before login
   $('.before-login').show()
 

@@ -10,7 +10,10 @@ const runEvents = require('./runs/events')
 // require('./example')
 
 $(() => {
-  $('.after-login').hide()
+  $('#buttons').hide()
+  $('#games').hide()
+  $('#runs').hide()
+  $('#auth').hide()
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
@@ -23,4 +26,14 @@ $(() => {
   $('#run-create').on('submit', runEvents.onRunCreate)
   $('#run-destroy').on('submit', runEvents.onDestroyRun)
   $('#run-update').on('submit', runEvents.onUpdateRun)
+  $('#gameActions').click(function() {
+    $('#games').show()
+    $('#runs').hide()
+    $('#game-display').text('')
+  })
+  $('#runActions').click(function() {
+    $('#runs').show()
+    $('#games').hide()
+    $('#game-display').text('')
+  })
 })
