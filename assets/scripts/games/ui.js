@@ -39,7 +39,9 @@ const onIndexSuccess = function (response) {
     `
     gamesHTML += currentGameHTML
   })
-  $('#game-display').html(gamesHTML)
+  if (!gamesHTML) {
+  $('#game-display').text('You have no Games.')
+  }
 }
 
 const onShowSuccess = function (gameData) {
