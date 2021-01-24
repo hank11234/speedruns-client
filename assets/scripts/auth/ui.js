@@ -46,8 +46,7 @@ const logoutSuccess = function () {
   $('#game-display').text('')
 
   // Hide after login
-  $('#gameActions').hide()
-  $('#runActions').hide()
+  $('#buttons').hide()
   $('#auth').hide()
   $('#games').hide()
   $('#runs').hide()
