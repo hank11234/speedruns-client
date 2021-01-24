@@ -13,6 +13,31 @@ h1 {
     border-bottom: 3px solid black;
 }
 
-// #game-display {
-//     display: flex
-// }
+#auth {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 20px;
+    background-color: #7bc2e0;
+}
+
+#games {
+    margin-bottom: 50px;
+}
+
+#runs {
+    margin-bottom: 50px;
+}
+
+#game-display {
+    margin-top: 10px;
+}
+
+#sign-up {
+    margin-bottom: 10px;
+}
+
+#btn {
+    background-color:  #ec97a4;
+}
