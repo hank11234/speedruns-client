@@ -26,12 +26,12 @@ $(() => {
   $('#run-create').on('submit', runEvents.onRunCreate)
   $('#run-destroy').on('submit', runEvents.onDestroyRun)
   $('#run-update').on('submit', runEvents.onUpdateRun)
-  $('.gameActions').click(function() {
+  $('#gameActions').click(function() {
     $('#games').show()
     $('#runs').hide()
     $('#game-display').text('')
   })
-  $('.runActions').click(function() {
+  $('#runActions').click(function() {
     $('#runs').show()
     $('#games').hide()
     $('#game-display').text('')

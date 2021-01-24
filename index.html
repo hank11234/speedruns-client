@@ -25,30 +25,30 @@
           <input placeholder="Email" type="text" name="credentials[email]" />
           <input placeholder="Password" type="password" name="credentials[password]" />
           <input placeholder="Confirm password" type="password" name="credentials[password_confirmation]" />
-          <button type="submit" id="btn">Sign Up</button>
+          <button type="submit" class="btn">Sign Up</button>
         </form>
 
         <h5>Sign-in</h5>
         <form id="sign-in">
           <input placeholder="Email" type="text" name="credentials[email]" />
           <input placeholder="Password" type="password" name="credentials[password]" />
-          <button type="submit" id="btn">Sign In</button>
+          <button type="submit" class="btn">Sign In</button>
         </form>
       </div>
       <div id="buttons">
-        <button class="gameActions" id="btn">Games</button>
-        <button class="runActions" id="btn">Runs</button>
+        <button id="gameActions" class="btn">Games</button>
+        <button id="runActions" class="btn">Runs</button>
         <br>
         <div id="game-display"></div>
         <br>
         <form id="games-index">
-          <button type="submit" id="btn">Show all your Games</button>
+          <button type="submit" class="btn">Show all your Games</button>
         </form>
         <br>
         <h3>Get a Game</h3>
         <form id="game-show">
           <input type="text" name="game[id]" placeholder="Game ID Here">
-          <input type="submit" value="Get Game" id="btn">
+          <input type="submit" value="Get Game" class="btn">
         </form>
       </div>
       <div id="games">
@@ -60,13 +60,13 @@
           <input type="text" name="game[releaseDate]" placeholder="Release date (mm/dd/yy)">
           <input type="text" name="game[genre]" placeholder="Genre">
           <input type="text" name="game[platform]" placeholder="Platform">
-          <button type="submit" id="btn">Add Game</button>
+          <button type="submit" class="btn">Add Game</button>
         </form>
         <br>
         <h3>Remove a Game</h3>
         <form id="game-destroy">
           <input type="text" name="game[id]" placeholder="Game ID">
-          <button type="submit" id="btn">Delete Game</button>
+          <button type="submit" class="btn">Delete Game</button>
         </form>
         <br>
         <h3>Edit a Game</h3>
@@ -76,7 +76,7 @@
           <input type="text" name="game[releaseDate]" placeholder="Release date (mm/dd/yy)">
           <input type="text" name="game[genre]" placeholder="Genre">
           <input type="text" name="game[platform]" placeholder="Platform">
-          <button type="submit" id="btn">Edit Game</button>
+          <button type="submit" class="btn">Edit Game</button>
         </form>
       </div>
 
@@ -88,14 +88,14 @@
           <input type="text" name="run[time]" placeholder="Length of Run (hh:mm:ss)">
           <input type="text" name="run[date]" placeholder="Run date (mm/dd/yy)">
           <input type="text" name="run[goal]" placeholder="Goal">
-          <button type="submit" id="btn">Add Run</button>
+          <button type="submit" class="btn">Add Run</button>
         </form>
         <br>
         <h3>Remove a Speedrun</h3>
         <form id="run-destroy">
           <input type="text" name="run[gameId]" placeholder="Game ID">
           <input type="text" name="run[id]" placeholder="Run ID">
-          <button type="submit" id="btn">Delete Run</button>
+          <button type="submit" class="btn">Delete Run</button>
         </form>
         <br>
         <h3>Edit a Speedrun</h3>
@@ -105,7 +105,7 @@
           <input type="text" name="run[time]" placeholder="Length of Run (hh:mm:ss)">
           <input type="text" name="run[date]" placeholder="Run date (mm/dd/yy)">
           <input type="text" name="run[goal]" placeholder="Goal">
-          <button type="submit" id="btn">Edit Run</button>
+          <button type="submit" class="btn">Edit Run</button>
         </form>
       </div>
       <div id="auth">
@@ -114,11 +114,11 @@
         <form id="change-password">
           <input placeholder="Old Password" type="password" name="passwords[old]" />
           <input placeholder="New Password" type="password" name="passwords[new]"/>
-          <button type="submit" id="btn">Change Password</button>
+          <button type="submit" class="btn">Change Password</button>
         </form>
         <br>
         <form id="logout">
-          <button type="submit" id="btn">Log out</button>
+          <button type="submit" class="btn">Log out</button>
         </form>
       </div>
     </body>
