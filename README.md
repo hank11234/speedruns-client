@@ -27,7 +27,7 @@ Initially my plan was to create the credential functions, then design the API fo
 - Add time input for run length
 
 ### Wireframe
-![Wireframe](https://imgur.com/1aFon4t)
+![Wireframe](https://i.imgur.com/1aFon4t.jpg)
 
 ### User Stories
 - As a user I want to be able to create an account to store my speedruns.
