@@ -5,11 +5,15 @@ const createGameSuccess = function (response) {
   $('#message').text('New Game added!')
 
   const gameHtml = `
-  <h3>${response.game.title}</h3>
-  <p>Release Date: ${response.game.releaseDate}</p>
-  <p>Genre: ${response.game.genre}</p>
-  <p>Platform: ${response.game.platform}</p>
-  <p>ID: ${response.game._id}</p>
+  <div class="card mx-auto">
+    <div class="card-body">
+      <h3 class="card-title">${response.game.title}</h3>
+      <p>Release Date: ${response.game.releaseDate}</p>
+      <p>Genre: ${response.game.genre}</p>
+      <p>Platform: ${response.game.platform}</p>
+      <p>ID: ${response.game._id}</p>
+    </div>
+  </div>
   `
 
   $('#game-display').html(gameHtml)
@@ -27,18 +31,19 @@ const onIndexSuccess = function (response) {
   const games = response.games
   console.log(games);
   // new empty array
-  let gamesHTML = ''
-  // for each movie in array games, generate HTML and put that HTML in the DOM
-  games.forEach(function (currentGame) {
-    const currentGameHTML = `
-    <h4>${currentGame.title}</h4>
-    <p>Release Date: ${currentGame.releaseDate}</p>
-    <p>Genre: ${currentGame.genre}</p>
-    <p>Platform: ${currentGame.platform}</p>
-    <p>Speedruns: ${currentGame.runs.length}</p>
-    <p>ID: ${currentGame._id}</p>
+  let gamesHTML = games.map(function (currentGame) {
+    return `
+      <div class="card mx-auto">
+        <div class="card-body">
+          <h4 class="card-title">${currentGame.title}</h4>
+          <p>Release Date: ${currentGame.releaseDate}</p>
+          <p>Genre: ${currentGame.genre}</p>
+          <p>Platform: ${currentGame.platform}</p>
+          <p>Speedruns: ${currentGame.runs.length}</p>
+          <p>ID: ${currentGame._id}</p>
+        </div>
+      </div>
     `
-    gamesHTML += currentGameHTML
   })
   if (!gamesHTML) {
     $('#game-display').text('You have no Games.')
@@ -51,15 +56,17 @@ const onShowSuccess = function (gameData) {
   $('#message').text('') 
   const runs = gameData.game.runs
   runs.sort((a, b) => (a.time > b.time) ? 1 : -1)
-  let runsHTML= ''
-  runs.forEach(function (currentRun) {
-    const currentRunHTML = `
-    <p>Time: ${currentRun.time}</p>
-    <p>Date: ${currentRun.date}</p>
-    <p>Goal: ${currentRun.goal}</p>
-    <p>Run ID: ${currentRun._id}</p>
+  let runsHTML= runs.map(function (currentRun) {
+    return `
+      <div class="card">
+        <div class="card-body">
+          <p>Time: ${currentRun.time}</p>
+          <p>Date: ${currentRun.date}</p>
+          <p>Goal: ${currentRun.goal}</p>
+          <p>Run ID: ${currentRun._id}</p>
+        </div>
+      </div>
     `
-    runsHTML += currentRunHTML
   })
   const gameHTML = `
     <h4>${gameData.game.title}</h4>
@@ -68,7 +75,7 @@ const onShowSuccess = function (gameData) {
     <p>Platform: ${gameData.game.platform}</p>
     <p>Speedruns: ${runsHTML}</p>
     <p>Game ID: ${gameData.game._id}</p>
-    `
+  `
   $('#game-display').html(gameHTML)
   $('form').trigger('reset')
 }

@@ -9,6 +9,11 @@ h1, .before-login, #games, #runs, #message, #game-display, #buttons, #auth {
     text-align: center
 }
 
+.card {
+    display: inline-block;
+    background-color: #ec97a4;
+}
+
 h1 {
     border-bottom: 3px solid black;
 }
