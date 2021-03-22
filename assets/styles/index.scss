@@ -1,0 +1,49 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    font-family: 'Goldman', cursive;
+    background-color: #7bc2e0;
+}
+
+h1, .before-login, #games, #runs, #message, #game-display, #buttons, #auth {
+    text-align: center
+}
+
+.card {
+    display: inline-block;
+    background-color: #ec97a4;
+}
+
+h1 {
+    border-bottom: 3px solid black;
+}
+
+#auth {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 20px;
+    background-color: #7bc2e0;
+}
+
+#games {
+    margin-bottom: 200px;
+}
+
+#runs {
+    margin-bottom: 200px;
+}
+
+#game-display {
+    margin-top: 10px;
+}
+
+#sign-up {
+    margin-bottom: 10px;
+}
+
+.btn {
+    background-color:  #ec97a4;
+    border: solid black 2px;
+}
